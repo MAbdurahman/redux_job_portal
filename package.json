@@ -1,0 +1,9 @@
+{
+  "name": "redux_job_portal",
+  "version": "1.0.0",
+  "description": "MERN Stack Application",
+  "main": "server.js",
+  "repository": "https://github.com/MAbdurahman/redux_job_portal.git",
+  "author": "Mahdi Abdurrahman <mdbdrrhm@gmail.com>",
+  "license": "MIT"
+}
