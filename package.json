@@ -5,5 +5,30 @@
   "main": "server.js",
   "repository": "https://github.com/MAbdurahman/redux_job_portal.git",
   "author": "Mahdi Abdurrahman <mdbdrrhm@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "SET NODE_ENV=DEVELOPMENT& nodemon backend/server",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [
+    "mongodb",
+    "express",
+    "react",
+    "node"
+  ],
+  "nodemonConfig": {
+    "delay": "2000"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.2.8"
+  }
 }
