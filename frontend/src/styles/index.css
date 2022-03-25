@@ -43,8 +43,10 @@
    margin-left: 10px !important;
 }
 
+/*=============================================
+         logo 
+================================================*/
 .logo {
-
    text-align: center;
    font-size: 30px !important;
 }
@@ -53,6 +55,9 @@
    color: white !important;
 }
 
+/*=============================================
+          
+================================================*/
 .ant-layout-content {
    margin: 0 !important;
    padding: 10px !important;

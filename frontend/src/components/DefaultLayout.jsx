@@ -29,7 +29,9 @@ class DefaultLayout extends React.Component {
 		return (
 			<Layout>
 				<Sider trigger={null} collapsible collapsed={this.state.collapsed}>
-					<div className='logo' />
+					<div className='logo'>
+						{this.state.collapsed ? <h1>JP</h1> : <h1>Jobs Portal</h1>}
+					</div>
 					<Menu theme='dark' mode='inline' defaultSelectedKeys={['1']}>
 						<Menu.Item key='1' icon={<UserOutlined />}>
 							nav 1
