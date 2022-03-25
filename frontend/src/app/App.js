@@ -1,11 +1,13 @@
 import React from 'react'
-import { Button } from 'antd';
+import HomePage from '../pages/HomePage'
+import JobInfoPage from '../pages/JobInfoPage'
+
 
 
 export default function App() {
   return (
     <div>
-      <Button type='primary'>App Component</Button>
+      <HomePage />
     </div>
   )
 }

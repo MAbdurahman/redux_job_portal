@@ -1,3 +1,4 @@
+import React from 'react'
 import { Layout, Menu } from 'antd';
 import {
 	MenuUnfoldOutlined,
@@ -9,7 +10,7 @@ import {
 
 const { Header, Sider, Content } = Layout;
 
-class SiderDemo extends React.Component {
+class DefaultLayout extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
