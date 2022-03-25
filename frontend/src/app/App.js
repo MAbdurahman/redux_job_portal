@@ -1,9 +1,11 @@
 import React from 'react'
+import { Button } from 'antd';
+
 
 export default function App() {
   return (
     <div>
-      <h2>app component</h2>
+      <Button type='primary'>App Component</Button>
     </div>
   )
 }
