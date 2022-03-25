@@ -1,12 +1,19 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import { Layout, Menu } from 'antd';
 import {
 	MenuUnfoldOutlined,
 	MenuFoldOutlined,
-	UserOutlined,
+	PlusSquareOutlined,
 	VideoCameraOutlined,
 	UploadOutlined,
+	HomeOutlined,
+	UserOutlined,
+	PlusOutlined,
+	CheckOutlined,
+	LogoutOutlined,
 } from '@ant-design/icons';
+
 
 const { Header, Sider, Content } = Layout;
 
@@ -32,15 +39,23 @@ class DefaultLayout extends React.Component {
 					<div className='logo'>
 						{this.state.collapsed ? <h1>JP</h1> : <h1>Jobs Portal</h1>}
 					</div>
-					<Menu theme='dark' mode='inline' defaultSelectedKeys={['1']}>
-						<Menu.Item key='1' icon={<UserOutlined />}>
-							nav 1
+					<Menu
+						theme='dark'
+						mode='inline'
+						defaultSelectedKeys={[window.location.pathname]}
+					>
+						<Menu.Item key='/' icon={<HomeOutlined />}>
+							<Link to='/'>Home</Link>
 						</Menu.Item>
-						<Menu.Item key='2' icon={<VideoCameraOutlined />}>
-							nav 2
+						<Menu.Item key='/profile' icon={<UserOutlined />}>
+							<Link to='/profile'>Profile</Link>
 						</Menu.Item>
-						<Menu.Item key='3' icon={<UploadOutlined />}>
-							nav 3
+						<Menu.Item key='/applied-jobs' icon={<PlusSquareOutlined />}>
+							<Link to='/applied-jobs'>Applied Jobs</Link>
+						</Menu.Item>
+
+						<Menu.Item key='/post-job' icon={<PlusOutlined />}>
+							<Link to='/post-job'>Post Job</Link>
 						</Menu.Item>
 					</Menu>
 				</Sider>
