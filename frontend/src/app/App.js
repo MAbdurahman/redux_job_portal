@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { BrowserRouter, Redirect, Route } from 'react-router-dom';
 import HomePage from '../pages/HomePage'
 import AppliedJobsPage from '../pages/AppliedJobsPage';
@@ -6,20 +6,27 @@ import PostJobPage from '../pages/PostJobPage';
 import ProfilePage from '../pages/ProfilePage';
 import JobInfoPage from '../pages/JobInfoPage';
 import { css } from '@emotion/react';
-import ClimbingBoxLoader from 'react-spinners/ClimbingBoxLoader';
+import ClipLoader from 'react-spinners/ClipLoader';
 import {useDispatch, useSelector } from 'react-redux'
+import { getAllJobs } from './../redux/actions/jobsActions'
 
 
 
 export default function App() {
-    const { loading } = useSelector(state => state.loader);
-    const dispatch = useDispatch();
+	//**************** variables ****************//
+	const { loading } = useSelector(state => state.loader);
+	const dispatch = useDispatch();
 
-  return (
+	//**************** functions ****************//
+	useEffect(() => {
+		dispatch(getAllJobs());
+	}, []);
+
+	return (
 		<div>
 			{loading && (
 				<div className='sweet-loading text-center'>
-					<ClimbingBoxLoader color={'#0D5BA3'} size={21} />
+					<ClipLoader color={'#0D5BA3'} size={66} />
 				</div>
 			)}
 			<BrowserRouter>
@@ -27,8 +34,8 @@ export default function App() {
 				<Route path='/applied-jobs' exact component={AppliedJobsPage} />
 				<Route path='/post-job' exact component={PostJobPage} />
 				<Route path='/profile' exact component={ProfilePage} />
-				<Route path='/job-info' exact component={JobInfoPage} />
+				<Route path='/jobs/:id' exact component={JobInfoPage} />
 			</BrowserRouter>
 		</div>
-  );
+	);
 }
