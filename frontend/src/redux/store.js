@@ -5,10 +5,11 @@ import thunk from 'redux-thunk';
 
 //**************** imported reducers ****************//
 import { jobsReducer } from './reducers/jobsReducer';
-
+import { loaderReducer } from './reducers/loaderReducer'
 //**************** combined reducers ****************//
 const reducers = combineReducers({
 	jobs: jobsReducer,
+   loader: loaderReducer
 });
 
 //**************** middlewares ****************//
