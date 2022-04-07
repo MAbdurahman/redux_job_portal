@@ -1,170 +1,189 @@
 @import '~antd/dist/antd.less';
-
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat:wght@300;400&display=swap');
 
 /* =========================================
             Website Resets
 ============================================ */
 
+/* =========================================
+                Root, Html, and Body
+============================================ */
+:root {
+	--clr-01: #ccdce3;
+	--clr-02: #9ac1d6;
+	--clr-03: #71a7c9;
+	--clr-04: #4b8ebd;
+	--clr-05: #2a74b0;
+	--clr-06: #0d5ba3;
+	--clr-07: #043e7d;
+	--clr-08: #002757;
+	--clr-09: #001430;
+	--clr-10: #00040a;
 
+	--ff-head: 'Merriweather', serif;
+	--ff-body: 'Montserrat', sans-serif;
+}
 
+body {
+   font-family: var(--ff-body);
+}
 
 #components-layout-demo-custom-trigger .trigger {
-   padding: 0 24px;
-   font-size: 18px;
-   line-height: 64px;
-   cursor: pointer;
-   transition: color 0.3s;
+	padding: 0 24px;
+	font-size: 18px;
+	line-height: 64px;
+	cursor: pointer;
+	transition: color 0.3s;
 }
 
 #components-layout-demo-custom-trigger .trigger:hover {
-   color: #0D5BA3;
+	color: #0d5ba3;
 }
 
 #components-layout-demo-custom-trigger .logo {
-   height: 32px;
-   margin: 16px;
-   background: rgba(255, 255, 255, 0.3);
+	height: 32px;
+	margin: 16px;
+	background: rgba(255, 255, 255, 0.3);
 }
 
 .site-layout .site-layout-background {
-   background: #fff;
+	background: #fff;
 }
 
 /*=============================================
          side menu
 ================================================*/
 .ant-layout-sider {
-   height: 100vh !important;
+	height: 100vh !important;
 }
 
 /*=============================================
          menu button trigger
 ================================================*/
 .ant-layout-header span svg {
-   height: 25px !important;
-   width: 25px !important;
-   margin-left: 10px !important;
+	height: 25px !important;
+	width: 25px !important;
+	margin-left: 10px !important;
 }
 
 /*=============================================
          logo 
 ================================================*/
 .logo {
-   text-align: center;
-   font-size: 30px !important;
+	text-align: center;
+	font-size: 30px !important;
 }
 
 .logo h1 {
-   color: white !important;
+	color: white !important;
 }
 
 /*=============================================
           
 ================================================*/
 .ant-layout-content {
-   margin: 0 !important;
-   padding: 10px !important;
+	margin: 0 !important;
+	padding: 10px !important;
 }
 
 .sweet-loading {
-   position: fixed !important;
-   top: 30% !important;
-   height: 100% !important;
-   width: 100% !important;
-   z-index: 9999;
-
+	position: fixed !important;
+	top: 30% !important;
+	height: 100% !important;
+	width: 100% !important;
+	z-index: 9999;
 }
 
 .flex {
-   display: flex !important;
-   align-items: center !important;
+	display: flex !important;
+	align-items: center !important;
 }
 
 p {
-   font-weight: 500 !important;
-   margin: 2px !important;
-   padding: 2px !important;
-   font-size: 16px !important;
+	font-weight: 500 !important;
+	margin: 2px !important;
+	padding: 2px !important;
+	font-size: 16px !important;
 }
 
 .bs {
-   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+	box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+		rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .job-div {
-   border-radius: 15px !important;
+	border-radius: 15px !important;
 }
 
 button {
-   background-color: #001529 !important;
-   color: white !important;
-   border-radius: 5px !important;
+	background-color: #001529 !important;
+	color: white !important;
+	border-radius: 5px !important;
 }
 
 .login,
 .register {
-   padding-top: 150px;
+	padding-top: 150px;
 }
 
 input,
 textarea {
-   border: 1px solid #001529 !important;
-   box-shadow: none !important;
+	border: 1px solid #001529 !important;
+	box-shadow: none !important;
 }
 
 .ant-message {
-   z-index: 9999 !important;
+	z-index: 9999 !important;
 }
 
 .ant-btn {
-   height: 33px !important;
+	height: 33px !important;
 }
 
 .login {
-   background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
-   height: 100vh !important;
+	background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+	height: 100vh !important;
 }
 
 .login-form {
-   background-color: white !important;
+	background-color: white !important;
 }
 
 .register {
-   background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
-   height: 100vh !important;
+	background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+	height: 100vh !important;
 }
 
 .register-form {
-   background-color: white !important;
+	background-color: white !important;
 }
 
 .heading1,
 .heading2 {
-   font-size: 100px !important;
-   color: white !important;
-   text-align: center !important;
+	font-size: 100px !important;
+	color: white !important;
+	text-align: center !important;
 }
 
 .heading1 {
-   border-top: 10px solid tomato !important;
-   margin: 10px;
+	border-top: 10px solid tomato !important;
+	margin: 10px;
 }
 
 .heading2 {
-   border-bottom: 10px solid yellow !important;
-   margin: 10px;
+	border-bottom: 10px solid yellow !important;
+	margin: 10px;
 }
 
 .ant-icon {
-   font-size: 20px !important;
-   margin-right: 5px !important;
+	font-size: 20px !important;
+	margin-right: 5px !important;
 }
 
 .ant-menu-item {
-   margin-top: 20px !important;
+	margin-top: 20px !important;
 }
 
 h1 {
-   font-size: 35px !important;
+	font-size: 35px !important;
 }
-
