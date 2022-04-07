@@ -7,8 +7,8 @@ const Job = require('../models/jobModel');
 ================================================*/
 exports.getAllJobs = async (req, res) => {
 	try {
-		const jobs = await Job.find({});
-		res.status(StatusCodes.OK).json({ jobs });
+		const jobs = await Job.find();
+		res.status(StatusCodes.OK).json(jobs);
 	} catch (error) {
 		res.status(StatusCodes.InternalServerError).json({ error });
 	}
