@@ -20,6 +20,7 @@ app.use(express.json());
 
 //**************** import all routes ****************//
 const jobsRouter = require('./../routes/jobRoutes')
+const userRouter = require('./../routes/userRoutes')
 
 //**************** app routes ****************//
 app.get('/api/v1', (req, res) => {
@@ -27,6 +28,7 @@ app.get('/api/v1', (req, res) => {
    res.send('Welcome to Job Portal!');
 });
 app.use('/api/v1/jobs/', jobsRouter);
+app.use('/api/v1/users/', userRouter);
 
 
 //**************** handle errors middleware ****************//

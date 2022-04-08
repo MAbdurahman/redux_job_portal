@@ -13,7 +13,7 @@ const password_pattern =
 	/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[-+_!@#$%^&*?]).{8,}$/i;
 
 const phone_pattern =
-	/^[(]{0,1}[0-9]{3}[)]{0,1}[-\s.]{0,1}[0-9]{3}[-\s.]{0,1}[0-9]{4}$/i;	
+	/^([(]{0,1}[0-9]{3}[)]{0,1}[-\s.]{0,1}[0-9]{3}[-\s.]{0,1}[0-9]{4})$/i;	
 
 const location_pattern = /([A-Za-z]+(?: [A-Za-z]+)*),? ([A-Za-z]{2})/;
 
@@ -24,7 +24,7 @@ const userSchema = new mongoose.Schema({
 		minlength: [4, 'Name must be at least 4 characters!'],
 		maxLength: [32, 'Name cannot exceed 32 characters!'],
 		match: [name_pattern, 'Enter first and last name!'],
-		default: 'First and last need to be updated!',
+		default: 'Name need to be updated!',
 	},
 	email: {
 		type: String,
@@ -63,7 +63,7 @@ const userSchema = new mongoose.Schema({
 		type: String,
 		trim: true,
 		match: [phone_pattern, 'Preferred Phone Pattern is: 123-456-7890'],
-		default: 'Phone number needs to be updated!',
+		default: '123-456-7890',
 	},
 	education: {
 		type: [],
