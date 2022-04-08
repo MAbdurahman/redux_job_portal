@@ -8,7 +8,7 @@ const {
 const router = express.Router();
 
 //**************** job routes ****************//
-router.route('/').get(getAllJobs);
+router.route('/get-all-jobs').get(getAllJobs);
 
 
 

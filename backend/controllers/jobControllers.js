@@ -2,9 +2,9 @@ const moment = require('moment');
 const { StatusCodes } = require('http-status-codes');
 const Job = require('../models/jobModel');
 
-/*=============================================
-   Get All Jobs(GET) -> /api/v1/jobs
-================================================*/
+/*=========================================================
+   Get All Jobs(GET) -> /api/v1/jobs/get-all-jobs
+============================================================*/
 exports.getAllJobs = async (req, res) => {
 	try {
 		const jobs = await Job.find();
